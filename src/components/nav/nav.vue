@@ -2,7 +2,7 @@
  * @Author: zmx
  * @Date: 2020-11-30 10:45:01
  * @LastEditors: zmx
- * @LastEditTime: 2020-12-01 15:13:02
+ * @LastEditTime: 2020-12-01 16:05:17
  * @FilePath: /vue-pro/src/components/nav/nav.vue
 -->
 <template>
@@ -35,7 +35,8 @@ export default {
     ]),
     goToPage(e) {
       const type = e.target.getAttribute('data-type');
-      this.$store.dispatch('goToPage', { $router: this.$router, type })
+      console.log('+++++', this.$store)
+      this.$store.dispatch('navModule/goToPage', { $router: this.$router, type })
       // this.$router.push(`/${type}`);
     }
   }
