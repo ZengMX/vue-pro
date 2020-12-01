@@ -2,7 +2,7 @@
  * @Author: zmx
  * @Date: 2020-11-27 17:44:00
  * @LastEditors: zmx
- * @LastEditTime: 2020-11-27 19:04:35
+ * @LastEditTime: 2020-12-01 16:25:43
  * @FilePath: /vue-pro/src/components/login/login.vue
 -->
 <template>
@@ -10,11 +10,6 @@
 </template>
 
 <script>
-
-export default {
-  name: 'Login',
-  created: () => {
-    console.log('route name------')
-  }
-}
+import login from './index'
+export default login
 </script>

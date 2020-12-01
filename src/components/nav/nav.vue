@@ -2,7 +2,7 @@
  * @Author: zmx
  * @Date: 2020-11-30 10:45:01
  * @LastEditors: zmx
- * @LastEditTime: 2020-12-01 16:17:02
+ * @LastEditTime: 2020-12-01 16:24:08
  * @FilePath: /vue-pro/src/components/nav/nav.vue
 -->
 <template>
@@ -26,25 +26,6 @@
 </template>
 
 <script>
-import { mapGetters, mapActions } from 'vuex'
-export default {
-  name: 'nav-page',
-  computed: mapGetters('navModule', [ // 添加了命名空间
-    'evenOrOdd'
-  ]),
-  methods: {
-    ...mapActions('navModule', [ // 添加了命名空间
-      'increment',
-      'decrement',
-      'incrementIfOdd',
-      'incrementAsync'
-    ]),
-    goToPage(e) {
-      const type = e.target.getAttribute('data-type');
-      console.log('+++++', this.$store)
-      this.$store.dispatch('navModule/goToPage', { $router: this.$router, type })
-      // this.$router.push(`/${type}`);
-    }
-  }
-}
+import nav from './index'
+export default nav
 </script>
